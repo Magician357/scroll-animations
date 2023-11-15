@@ -44,10 +44,14 @@ const redbox=document.getElementById("redbox");
 const greenbox=document.getElementById("greenbox");
 const bluebox=document.getElementById("bluebox");
 
+const scroll_indicator=document.getElementById("scroll_indicator");
+
 var scrollAmount;
 addEventListener("scroll", (event) => {
     // console.log(document.documentElement.scrollTop);
     scrollAmount=document.documentElement.scrollTop;
+
+    scroll_indicator.innerText=Math.round(scrollAmount*100)/100;
 
     if (scrollAmount>=0&&scrollAmount<=1000){
         redbox.classList.remove("hidden");
