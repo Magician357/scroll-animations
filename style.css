@@ -1,9 +1,13 @@
-*:not(html) {
+*:not(html,p) {
     position:fixed
 }
 
+#scroll_indicator{
+    position:fixed;
+}
+
 body {
-    height: 5000px;
+    height: 10000px;
     position: absolute !important;
     overflow-y: auto;
     width:90vw;
@@ -31,4 +35,22 @@ body {
 
 .hidden {
     display:none !important;
+}
+
+.text-big {
+    /* white-space: pre; */
+    width:90vw;
+    background:rgb(230, 230, 230, 0.5);
+    height:2000px;
+    left: 5vw;
+    padding-left:10px;
+    /* transform: translateY(0px); */
+}
+
+.text-big p {
+    /* white-space: pre; */
+    text-wrap: balance;
+    width:80vw;
+    white-space: normal;
+    word-break:break-all;
 }
